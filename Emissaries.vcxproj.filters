@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\engine">
+      <UniqueIdentifier>{47686208-2d90-478c-809b-b9dd58cc4a73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\engine\render">
+      <UniqueIdentifier>{8e938601-13cb-47cf-aada-9233397ae0cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Pong.cpp">
+    <ClCompile Include="src\engine\render\Renderer.cpp">
+      <Filter>Source Files\engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\render\TextureManager.cpp">
+      <Filter>Source Files\engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\engine\render\Renderer.h">
+      <Filter>Source Files\engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\render\Rectangle.h">
+      <Filter>Source Files\engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\render\SDLException.h">
+      <Filter>Source Files\engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\render\Sprite.h">
+      <Filter>Source Files\engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\render\TextureManager.h">
+      <Filter>Source Files\engine\render</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
