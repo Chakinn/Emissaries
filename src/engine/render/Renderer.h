@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <string>
+#include <memory>
 #include <SDL.h>
 #include "SDLException.h"
 #include "Rectangle.h"
@@ -20,8 +21,10 @@ namespace engine {
 
 			void initView();
 			void renderClear();
-			void renderPreset();
+			void renderPresent();
 			void renderSprite(const Sprite& sprite, const Rectangle& destination);
+
+			SDL_Texture* loadTexture(const std::string& path);
 
 		private:
 			SDL_Window* sdlWindow;

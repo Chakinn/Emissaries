@@ -19,6 +19,18 @@
     <Filter Include="Source Files\engine\render">
       <UniqueIdentifier>{8e938601-13cb-47cf-aada-9233397ae0cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\game">
+      <UniqueIdentifier>{6f241016-ea5a-4839-b9ac-8990cf90e7d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\combat">
+      <UniqueIdentifier>{5a4afdfb-5f19-4c95-964c-d16e441acafa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\spritesheets">
+      <UniqueIdentifier>{8f8cccb8-c4be-4905-a0a9-17e7244a0eca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\game\graphics">
+      <UniqueIdentifier>{e5df75d2-7fe6-4f8a-8aac-862a30c14b0e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\render\Renderer.cpp">
@@ -27,8 +39,23 @@
     <ClCompile Include="src\engine\render\TextureManager.cpp">
       <Filter>Source Files\engine\render</Filter>
     </ClCompile>
-    <ClCompile Include="Main.cpp">
+    <ClCompile Include="src\Main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\combat\Board.cpp">
+      <Filter>Source Files\game\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\graphics\Drawer.cpp">
+      <Filter>Source Files\game\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\combat\Unit.cpp">
+      <Filter>Source Files\game\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\combat\UnitGrid.cpp">
+      <Filter>Source Files\game\combat</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\graphics\SpriteManager.cpp">
+      <Filter>Source Files\game\graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,5 +74,25 @@
     <ClInclude Include="src\engine\render\TextureManager.h">
       <Filter>Source Files\engine\render</Filter>
     </ClInclude>
+    <ClInclude Include="src\game\combat\Board.h">
+      <Filter>Source Files\game\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\graphics\Drawer.h">
+      <Filter>Source Files\game\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\combat\Unit.h">
+      <Filter>Source Files\game\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\combat\UnitGrid.h">
+      <Filter>Source Files\game\combat</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\graphics\SpriteManager.h">
+      <Filter>Source Files\game\graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\spritesheets\weapons.png">
+      <Filter>Resource Files\spritesheets</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -2,14 +2,49 @@
 //
 
 #include <iostream>
+#include <memory>
 #include <SDL.h>
 #include "Renderer.h"
+#include "SpriteManager.h"
+#include "UnitGrid.h"
+#include "Drawer.h"
+
 
 int main(int argc, char *argv[])
 {
-	engine::render::Renderer renderer;
+	
 	try {
-		renderer.initView();
+		engine::render::Renderer renderer;
+		game::graphics::Drawer drawer(&renderer);
+		
+		
+		auto tex = renderer.loadTexture("res/spritesheets/weapons.png");
+
+		engine::render::Rectangle axeSource = { 64,0,64,64 };
+		engine::render::Sprite axeSprite = { tex, axeSource };
+		auto axe = std::make_shared<game::combat::Unit>(axeSprite);
+
+		engine::render::Rectangle bowSource = { 0,64,64,64 };
+		engine::render::Sprite bowSprite = { tex, bowSource };
+		auto bow = std::make_shared<game::combat::Unit>(bowSprite);
+
+		game::combat::UnitGrid allyUnitGrid;
+		allyUnitGrid.addUnit(0, 0, bow);
+		allyUnitGrid.addUnit(1, 1, axe);
+		allyUnitGrid.addUnit(2, 1, axe);
+
+		game::combat::UnitGrid enemyUnitGrid;
+		enemyUnitGrid.addUnit(0, 0, axe);
+		enemyUnitGrid.addUnit(1, 0, axe);
+		enemyUnitGrid.addUnit(2, 0, axe);
+		enemyUnitGrid.addUnit(1, 1, bow);
+		enemyUnitGrid.addUnit(2, 1, bow);
+
+		drawer.drawUnitGrid(allyUnitGrid, 100, 100, 200, 300);
+		drawer.drawUnitGrid(enemyUnitGrid,400,100,200,300);
+		
+		renderer.renderPresent();
+		SDL_Delay(2000);
 	}
 	catch (const engine::render::SDLException ex) {
 		std::cout << ex.message << std::endl;

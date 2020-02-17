@@ -1,7 +1,9 @@
 #include "Renderer.h"
 using namespace engine::render;
 
-Renderer::Renderer() {}
+Renderer::Renderer() {
+	initView();
+}
 
 Renderer::~Renderer() {
 	if (sdlRenderer != nullptr) {
@@ -34,7 +36,7 @@ void Renderer::renderClear() {
 	SDL_RenderClear(sdlRenderer);
 }
 
-void Renderer::renderPreset() {
+void Renderer::renderPresent() {
 	SDL_RenderPresent(sdlRenderer);
 }
 
@@ -43,6 +45,15 @@ void Renderer::renderSprite(const Sprite& sprite, const Rectangle& destination) 
 	SDL_Rect dst = createSDLRect(destination);
 
 	SDL_RenderCopy(sdlRenderer, sprite.texture, &src, &dst);
+}
+
+SDL_Texture * engine::render::Renderer::loadTexture(const std::string & path) {
+	SDL_Texture* tex = IMG_LoadTexture(sdlRenderer, path.c_str());
+	if (tex == nullptr) {
+		std::string errorMsg = "SDL_CreateTextureFromSurface Error: " + std::string(SDL_GetError());
+		throw SDLException(errorMsg);
+	}
+	return tex;
 }
 
 SDL_Rect Renderer::createSDLRect(const Rectangle& rectangle) {

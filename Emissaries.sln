@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.1000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Emissaries", "Emissaries.vcxproj", "{C42C3FD6-801A-480C-8147-57A08FF41184}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "EmissariesTest", "EmissariesTest\EmissariesTest.vcxproj", "{C965C272-29E0-4EEA-8C20-7A6A20BC384F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{C42C3FD6-801A-480C-8147-57A08FF41184}.Release|x64.Build.0 = Release|x64
 		{C42C3FD6-801A-480C-8147-57A08FF41184}.Release|x86.ActiveCfg = Release|Win32
 		{C42C3FD6-801A-480C-8147-57A08FF41184}.Release|x86.Build.0 = Release|Win32
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Debug|x64.ActiveCfg = Debug|x64
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Debug|x64.Build.0 = Debug|x64
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Debug|x86.ActiveCfg = Debug|Win32
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Debug|x86.Build.0 = Debug|Win32
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Release|x64.ActiveCfg = Release|x64
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Release|x64.Build.0 = Release|x64
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Release|x86.ActiveCfg = Release|Win32
+		{C965C272-29E0-4EEA-8C20-7A6A20BC384F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
