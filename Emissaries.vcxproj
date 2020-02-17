@@ -180,7 +180,6 @@
     <ClCompile Include="src\engine\render\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\engine\render\Rectangle.h" />
     <ClInclude Include="src\engine\render\Renderer.h" />
     <ClInclude Include="src\engine\render\SDLException.h" />
     <ClInclude Include="src\engine\render\Sprite.h" />

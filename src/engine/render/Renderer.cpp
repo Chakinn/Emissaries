@@ -40,11 +40,8 @@ void Renderer::renderPresent() {
 	SDL_RenderPresent(sdlRenderer);
 }
 
-void Renderer::renderSprite(const Sprite& sprite, const Rectangle& destination) {
-	SDL_Rect src = createSDLRect(sprite.source);
-	SDL_Rect dst = createSDLRect(destination);
-
-	SDL_RenderCopy(sdlRenderer, sprite.texture, &src, &dst);
+void Renderer::renderSprite(const Sprite& sprite, const SDL_Rect& destination) {
+	SDL_RenderCopy(sdlRenderer, sprite.texture, &sprite.source, &destination);
 }
 
 SDL_Texture * engine::render::Renderer::loadTexture(const std::string & path) {
@@ -55,10 +52,4 @@ SDL_Texture * engine::render::Renderer::loadTexture(const std::string & path) {
 	}
 	return tex;
 }
-
-SDL_Rect Renderer::createSDLRect(const Rectangle& rectangle) {
-	SDL_Rect sdlRect = { rectangle.x,rectangle.y,rectangle.width,rectangle.height };
-	return sdlRect;
-}
-
 

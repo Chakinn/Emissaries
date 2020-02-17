@@ -20,11 +20,11 @@ int main(int argc, char *argv[])
 		
 		auto tex = renderer.loadTexture("res/spritesheets/weapons.png");
 
-		engine::render::Rectangle axeSource = { 64,0,64,64 };
+		SDL_Rect axeSource = { 64,0,64,64 };
 		engine::render::Sprite axeSprite = { tex, axeSource };
 		auto axe = std::make_shared<game::combat::Unit>(axeSprite);
 
-		engine::render::Rectangle bowSource = { 0,64,64,64 };
+		SDL_Rect bowSource = { 0,64,64,64 };
 		engine::render::Sprite bowSprite = { tex, bowSource };
 		auto bow = std::make_shared<game::combat::Unit>(bowSprite);
 

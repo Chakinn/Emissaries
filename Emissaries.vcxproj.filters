@@ -62,9 +62,6 @@
     <ClInclude Include="src\engine\render\Renderer.h">
       <Filter>Source Files\engine\render</Filter>
     </ClInclude>
-    <ClInclude Include="src\engine\render\Rectangle.h">
-      <Filter>Source Files\engine\render</Filter>
-    </ClInclude>
     <ClInclude Include="src\engine\render\SDLException.h">
       <Filter>Source Files\engine\render</Filter>
     </ClInclude>

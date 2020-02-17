@@ -4,8 +4,8 @@
 #include <string>
 #include <memory>
 #include <SDL.h>
+#include <SDL_image.h>
 #include "SDLException.h"
-#include "Rectangle.h"
 #include "Sprite.h"
 
 namespace engine {
@@ -22,15 +22,13 @@ namespace engine {
 			void initView();
 			void renderClear();
 			void renderPresent();
-			void renderSprite(const Sprite& sprite, const Rectangle& destination);
+			void renderSprite(const Sprite& sprite, const SDL_Rect& destination);
 
 			SDL_Texture* loadTexture(const std::string& path);
 
 		private:
 			SDL_Window* sdlWindow;
 			SDL_Renderer* sdlRenderer;
-
-			SDL_Rect createSDLRect(const Rectangle& rectangle);
 		};
 	}
 }
