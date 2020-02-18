@@ -31,6 +31,9 @@
     <Filter Include="Source Files\game\graphics">
       <UniqueIdentifier>{e5df75d2-7fe6-4f8a-8aac-862a30c14b0e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\engine\core">
+      <UniqueIdentifier>{6627c647-1e3c-4f95-bd09-063382fe5e97}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\engine\render\Renderer.cpp">
@@ -56,6 +59,9 @@
     </ClCompile>
     <ClCompile Include="src\game\graphics\SpriteManager.cpp">
       <Filter>Source Files\game\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\engine\core\Engine.cpp">
+      <Filter>Source Files\engine\core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +91,18 @@
     </ClInclude>
     <ClInclude Include="src\game\graphics\SpriteManager.h">
       <Filter>Source Files\game\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\EventDispatcher.h">
+      <Filter>Source Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\GameStateUpdater.h">
+      <Filter>Source Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\ViewUpdater.h">
+      <Filter>Source Files\engine\core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\engine\core\Engine.h">
+      <Filter>Source Files\engine\core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

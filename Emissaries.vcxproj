@@ -167,6 +167,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\engine\core\Engine.cpp" />
     <ClCompile Include="src\game\combat\Board.cpp" />
     <ClCompile Include="src\game\combat\Unit.cpp" />
     <ClCompile Include="src\game\combat\UnitGrid.cpp" />
@@ -180,6 +181,10 @@
     <ClCompile Include="src\engine\render\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\engine\core\Engine.h" />
+    <ClInclude Include="src\engine\core\EventDispatcher.h" />
+    <ClInclude Include="src\engine\core\GameStateUpdater.h" />
+    <ClInclude Include="src\engine\core\ViewUpdater.h" />
     <ClInclude Include="src\engine\render\Renderer.h" />
     <ClInclude Include="src\engine\render\SDLException.h" />
     <ClInclude Include="src\engine\render\Sprite.h" />
